@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>答题竞猜系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/peskin.css" />
+	<!--[if lt IE 9]>
+	<script src="app/core/styles/js/html5shiv.min.js"></script>
+	<script src="app/core/styles/js/respond.min.js"></script>
+	<![endif]-->
+	<script src="app/core/styles/js/jquery.min.js"></script>
+	<script src="app/core/styles/js/jquery.json.js"></script>
+	<script src="app/core/styles/js/jquery-ui.min.js"></script>
+	<script src="app/core/styles/js/bootstrap.min.js"></script>
+	<script src="app/core/styles/js/bootstrap-datetimepicker.js"></script>
+	<script src="app/core/styles/js/all.fine-uploader.min.js"></script>
+	<script src="app/core/styles/js/ckeditor/js/MathJax.js?config=TeX-AMS_HTML"></script>
+	<script src="app/core/styles/js/ckeditor/ckeditor.js"></script>
+	<script src="app/core/styles/js/plugin.js"></script>
+	<script src="app/exam/styles/js/plugin.js"></script>
+</head><body>
+<div class="container-fluid" style="background-color:#2F3541;margin:0px auto;padding-top:10px;overflow:visible;border-bottom:#eeeeee solid 1px;height: 72px;">
+	<div class="row-fluid">
+		<div class="main">
+			<div class="col-xs-4">
+				<h2 style="font-size:24px;color:#FFFFFF;">答题竞猜系统</h2>
+			</div>
+			<div class="col-xs-6" style="padding-top:16px;" id="topnav2">
+                <ul class="list-unstyled list-inline">
+                    <!--<li class="menu col-xs-1 active" style="width:20%;"><a href="index.php">网站首页</a></li>-->
+					<li class="menu col-xs-1" style="width:20%;"><a href="index.php?exam-app-exam">答题竞猜</a></li>
+
+                </ul>
+			</div>
+			<div class="col-xs-2" style="padding-top:10px;">
+				<ul class="list-unstyled list-inline">
+                    					<li>
+						<div class="btn-group">
+							<button type="button" class="btn btn-info"><em class="glyphicon glyphicon-user"></em> peadmin</button>
+							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="index.php?user-center"><em class="glyphicon glyphicon-user"></em> 用户中心</a></li>
+                                                                <li><a href="index.php?core-master"><em class="glyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphicon-log-out"></em> 退出</a></li>
+							</ul>
+						</div>
+					</li>
+                    				</ul>
+			</div>
+		</div>
+	</div>
+</div><div class="container-fluid">
+	<div class="row-fluid">
+		<div class="main">
+			<div class="box itembox" style="margin-bottom:0px;">
+				<div class="col-xs-12">
+					<ol class="breadcrumb">
+					  <li><a href="index.php">首页</a></li>
+					  <li><a href="index.php?exam-app">考试</a></li>
+					  <li><a href="index.php?exam-app-basics">上半场</a></li>
+					  <li><a href="index.php?exam-app-exam">正式考试</a></li>
+					  <li class="active">成绩单</li>
+					</ol>
+				</div>
+			</div>
+			<div class="box itembox">
+				<legend class="text-center"><h3>上半场</h3></legend>
+								<div class="col-xs-4">
+            		<div class="boardscore">
+            			<h1 class="text-center text-danger">0.00 分</h1>
+            			<p>分数评价</p>
+            		</div>
+            	</div>
+            	<div class="col-xs-8">
+            		<div><b class="text-info">考试详情：</b></div>
+          			<p>总分：<b class="text-warning">110</b>分 合格分数线：<b class="text-warning">90</b>分 答卷耗时：<b class="text-warning">25分钟</b></p>
+              		<table class="table table-hover table-bordered">
+                      <tr class="success">
+                        <th>题型</th>
+                        <th>总题数</th>
+                        <th>答对题数</th>
+                        <th>总分</th>
+                        <th>得分</th>
+                      </tr>
+                                                                  <tr>
+                        <td>单选题</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>4.0</td>
+                        <td>0.0</td>
+                      </tr>
+                                                                                                                                                                                                                                                                                              <tr>
+                        <td colspan="5" align="left">本次考试共<b class="text-warning">4</b>道题，总分<b class="text-warning">110</b>分，您做对<b class="text-warning">0</b>道题，得到<b class="text-warning">0.00</b>分</td>
+                      </tr>
+                   </table>
+                               	</div>
+            	            </div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
