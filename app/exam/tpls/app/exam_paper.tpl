@@ -5,11 +5,6 @@
 		<div class="main box">
 			<div class="col-xs-3" id="questionbar">
 				<dl class="clear" style="width:270px;" data-spy="affix" data-offset-top="235" id="questionindex">
-					<!--<dd>
-						<h2><a class="btn btn-danger col-xs-12" style="font-size:1.2em;"><span id="timer_h">00</span>：<span id="timer_m">00</span>：<span id="timer_s">00</span></a></h2>
-					</dd>-->
-
-
 					<dt class="float_l"><h4>&nbsp;</h4></dt>
 					<ul class="nav nav-tabs" role="tablist">
 						{x2;eval: v:oid = 0}
@@ -23,12 +18,11 @@
 						{x2;endif}
 						{x2;eval: v:oid++}
 						<li role="presentation"{x2;if:v:qid == 1} class="active"{x2;endif}><a href="#qt_{x2;v:quest}" aria-controls="home" role="tab" data-toggle="tab">{x2;$questype[v:quest]['questype']}</a></li>
-						<!--<li role="presentation"{x2;if:v:qid == 1} class="active"{x2;endif}><a href="#qt_{x2;v:quest}" aria-controls="home" role="tab" data-toggle="tab">{x2;$ols[v:oid]}</a></li>-->
 						{x2;endif}
 						{x2;endif}
 						{x2;endtree}
 					</ul>
-					<div class="tab-content" style="margin-top:5px;">
+					<div class="tab-content" style="margin-top:5px;" id="questionindex">
 						{x2;eval: v:oid = 0}
 						{x2;eval: v:qmid = 0}
 						{x2;tree:$sessionvars['examsessionsetting']['examsetting']['questypelite'],lite,qid}
@@ -38,29 +32,33 @@
 						{x2;eval: v:oid++}
 						<div role="tabpanel" class="tab-pane tableindex{x2;if:v:qid == 1} active{x2;endif}" id="qt_{x2;v:quest}">
 							{x2;eval: v:tid = 0}
-							{x2;tree:$sessionvars['examsessionquestion']['questions'][v:quest],question,qnid}
-							{x2;eval: v:tid++}
-							{x2;eval: v:qmid++}
-
-							<a id="sign_{x2;v:question['questionid']}" href="javascript:;" onclick="javascript:gotoquestion('{x2;v:question['questionid']}')" class="btn btn-default{x2;if:$sessionvars['examsessionsign'][v:question['questionid']]} btn-danger{x2;endif}"><span>{x2;v:question['questionknowsid'][0]['knows']}</span></a>
+			                {x2;tree:$sessionvars['examsessionquestion']['questions'][v:quest],question,qnid}
+			                {x2;eval: v:tid++}
+			                {x2;eval: v:qmid++}
+							<a id="sign_{x2;v:question['questionid']}" href="javascript:;" onclick="javascript:gotoquestion('{x2;v:question['questionid']}')" class="btn btn-default{x2;if:$sessionvars['examsessionsign'][v:question['questionid']]} btn-danger{x2;endif}">{x2;v:tid}</a>
 							{x2;endtree}
 							{x2;tree:$sessionvars['examsessionquestion']['questionrows'][v:quest],questionrow,qrid}
-							{x2;eval: v:tid++}
-							{x2;tree:v:questionrow['data'],data,did}
-							{x2;eval: v:qmid++}
-							<a id="sign_{x2;v:data['questionid']}" href="javascript:;" onclick="javascript:gotoquestion('{x2;v:data['questionid']}')" class="btn btn-default{x2;if:$sessionvars['examsessionsign'][v:data['questionid']]} btn-danger{x2;endif}">{x2;v:tid}-{x2;v:did}</a>
-							{x2;endtree}
-							{x2;endtree}
+			                {x2;eval: v:tid++}
+			                {x2;tree:v:questionrow['data'],data,did}
+			                {x2;eval: v:qmid++}
+			                <a id="sign_{x2;v:data['questionid']}" href="javascript:;" onclick="javascript:gotoquestion('{x2;v:data['questionid']}')" class="btn btn-default{x2;if:$sessionvars['examsessionsign'][v:data['questionid']]} btn-danger{x2;endif}">{x2;v:tid}-{x2;v:did}</a>
+                			{x2;endtree}
+                			{x2;endtree}
 						</div>
 						{x2;endif}
 						{x2;endif}
 						{x2;endtree}
 					</div>
 				</dl>
+				<div class="float_l list-group" id="Topic-list">
+					<div>22222222222222222222222222222222</div>
+					<div>22222222222222222222222222222222</div>
+					<div>22222222222222222222222222222222</div>
+				</div>
 			</div>
 			<form id="form1" name="form1" method="post" action="index.php?exam-app-exam-score" class="col-xs-9 split pull-right" style="padding:0px;">
 				<div class="box itembox">
-					<h2 class="text-center">{x2;$sessionvars['examsession']}</h2>
+					<!--<h2 class="text-center">{x2;$sessionvars['examsession']}</h2>-->
 				</div>
 				{x2;eval: v:oid = 0}
 				{x2;eval: v:qcid = 0}
@@ -78,9 +76,9 @@
                 {x2;eval: v:qcid++}
 				<div class="box itembox paperexamcontent" id="questions_{x2;v:question['questionid']}" rel="{x2;v:quest}">
 					<h4 class="title">
-						第{x2;v:tid}题
+						知识点:{x2;v:question['questionknowsid'][0]['knows']}
 						<span class="pull-right">
-							<!--<a class="btn {x2;if:$sessionvars['examsessionsign'][v:question['questionid']]}btn-danger{x2;else}btn-info{x2;endif} qicon" href="javascript:;" onclick="javascript:signQuestion('{x2;v:question['questionid']}',this);"><i class="glyphicon glyphicon-bookmark"></i></a>-->
+							<a class="btn {x2;if:$sessionvars['examsessionsign'][v:question['questionid']]}btn-danger{x2;else}btn-info{x2;endif} qicon" href="javascript:;" onclick="javascript:signQuestion('{x2;v:question['questionid']}',this);"><i class="glyphicon glyphicon-bookmark"></i></a>
 							<a name="question_{x2;v:question['questionid']}">
 							<input id="time_{x2;v:question['questionid']}" type="hidden" name="time[{x2;v:question['questionid']}]"/>
 						</span>
@@ -198,13 +196,12 @@
 				{x2;endtree}
 				<h3 class="text-center">
 					<input type="hidden" name="insertscore" value="1"/>
-					<a class="btn btn-primary" style="font-size:1em;width:270px;" href="#submodal" role="button" data-toggle="modal">确认</a>
+					<a class="btn btn-primary" style="font-size:1em;width:270px;" href="#submodal" role="button" data-toggle="modal">交 卷</a>
 				</h3>
 			</form>
 		</div>
 	</div>
 </div>
-<!--
 <div class="modal fade" id="submodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -221,8 +218,7 @@
 			</div>
 		</div>
 	</div>
-</div>-->
-
+</div>
 <div id="dg" style="z-index: 9999; position: fixed ! important; right: 0px; top: 10%;background-color:rgba(255,255,255,0.15)" class="panel-heading" >
 	<table width=""100% style="position: absolute; width:260px; right: 0px; top: 0px;" class="table-hover">
 		<tr id="ranktable">
@@ -235,7 +231,6 @@
 	</table>
 
 </div>
-
 <script type="text/javascript">
 var qindex = 0;
 function gotoquestion(questid)
@@ -251,8 +246,6 @@ function gotoindexquestion(index)
 	$(".paperexamcontent").hide();
 	$(".paperexamcontent").eq(index).show();
 	$("#questype_"+$(".paperexamcontent").eq(index).attr('rel')).show();
-
-	// console.log($(".paperexamcontent input[type=redio] selected").val())
 }
 $(document).ready(function(){
 	$.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
@@ -402,28 +395,26 @@ $(document).ready(function(){
 	$('.yesdonumber').html($('#questionindex .btn-primary').length);
 });
 
-
-
 //排名榜
 setInterval(function(){
-	var rank =$("#rank");
+    var rank =$("#rank");
 
     var URL="index.php?exam-app-exam-rank";
     $.post(URL,'',function (result) {
-		console.log(result)
-	if(!result)	return false;
-    var td ='';
-	$.each(result,function (i,item) {
-		td+=rankdata(i+1,item[0],item[1]);
-	})
-     if(td){
-	     $("#ranktable").next().nextAll().remove();//清空数据榜
-         rank.after(td);
-	 }
+        console.log(result)
+        if(!result)	return false;
+        var td ='';
+        $.each(result,function (i,item) {
+            td+=rankdata(i+1,item[0],item[1]);
+        })
+        if(td){
+            $("#ranktable").next().nextAll().remove();//清空数据榜
+            rank.after(td);
+        }
 
     },"json");
 
-    },500);
+},500);
 
 function rankdata(i,name,score)
 {
@@ -434,6 +425,10 @@ function rankdata(i,name,score)
     td+='<td>'+score+'</td>';
     td+="</tr>";
     return td;
+}
+//添加一道题考试记录
+function addExamHistory($sessionid = false,$status = 1) {
+	
 }
 </script>
 </body>

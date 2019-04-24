@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>答题竞猜</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/peskin.css" />
+	<!--[if lt IE 9]>
+	<script src="app/core/styles/js/html5shiv.min.js"></script>
+	<script src="app/core/styles/js/respond.min.js"></script>
+	<![endif]-->
+	<script src="app/core/styles/js/jquery.min.js"></script>
+	<script src="app/core/styles/js/jquery.json.js"></script>
+	<script src="app/core/styles/js/jquery-ui.min.js"></script>
+	<script src="app/core/styles/js/bootstrap.min.js"></script>
+	<script src="app/core/styles/js/bootstrap-datetimepicker.js"></script>
+
+	<script src="app/core/styles/js/all.fine-uploader.min.js"></script>
+
+	<script src="app/core/styles/js/ckeditor/ckeditor.js"></script>
+	<script src="app/core/styles/js/plugin.js"></script>
+	<script src="app/exam/styles/js/plugin.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="container-fluid box" style="margin:0px auto;padding-top:10px;overflow:visible">	<div class="row-fluid">		<div class="main">			<div class="col-xs-10">				<h2 style="color:#337AB7;"><a href="index.php">&nbsp;管理平台</a></h2>			</div>			<div class="col-xs-2" style="padding-top:22px;">				<ul class="list-unstyled list-inline">										<li>						<div class="btn-group">							<button type="button" class="btn btn-info"><em class="glyphicon glyphglyphicon glyphicon-user"></em> peadmin</button>							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">								<span class="caret"></span>								<span class="sr-only">Toggle Dropdown</span>							</button>							<ul class="dropdown-menu">								<li><a href="index.php?user-center"><em class="glyphicon glyphglyphicon glyphicon-user"></em> 用户中心</a></li>																<li><a href="index.php?core-master"><em class="glyphicon glyphglyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphglyphicon glyphicon-log-out"></em> 退出</a></li>							</ul>						</div>					</li>									</ul>			</div>		</div>	</div></div><div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;padding-top:10px;background-color:#337AB7;">	<div class="row-fluid">		<div class="main">			<div class="col-xs-12">				<ul class="list-unstyled list-inline">					<li class="menu col-xs-1">						<a href="index.php?core-master">全局</a>					</li>																				<li class="menu col-xs-1">						<a href="index.php?user-master">用户模块</a>					</li>																				<li class="menu col-xs-1 active">						<a href="index.php?exam-master">考试模块</a>					</li>																													</ul>			</div>		</div>	</div></div><div class="container-fluid" id="questioncontent">
+	<div class="row-fluid">
+		<div class="main box">
+			<div class="col-xs-3" id="questionbar">
+				<dl class="clear" style="width:270px;" data-spy="affix" data-offset-top="235">
+					<dt class="float_l"><h4>&nbsp;</h4></dt>
+					<ul class="nav nav-tabs" role="tablist">
+																																										<li role="presentation" class="active"><a href="#qt_1" aria-controls="home" role="tab" data-toggle="tab">一</a></li>
+
+																																																																																																																																										<li role="presentation"><a href="#qt_5" aria-controls="home" role="tab" data-toggle="tab">二</a></li>
+
+																																																<li role="presentation"><a href="#qt_6" aria-controls="home" role="tab" data-toggle="tab">三</a></li>
+
+																							</ul>
+					<div class="tab-content" style="margin-top:5px;" id="questionindex">
+																																										<div role="tabpanel" class="tab-pane tableindex active" id="qt_1">
+										                			                							<a id="sign_3639" href="#question_3639" class="btn btn-default">1</a>
+										                							<a id="sign_6826" href="#question_6826" class="btn btn-default">2</a>
+																				</div>
+																																																																																																																																										<div role="tabpanel" class="tab-pane tableindex" id="qt_5">
+										                			                							<a id="sign_6830" href="#question_6830" class="btn btn-default">1</a>
+																				</div>
+																																																<div role="tabpanel" class="tab-pane tableindex" id="qt_6">
+										                			                							<a id="sign_6829" href="#question_6829" class="btn btn-default">1</a>
+																				</div>
+																							</div>
+				</dl>
+			</div>
+			<div class="col-xs-9 split pull-right" style="padding:0px;position:relative;">
+				<div class="box itembox">
+					<h2 class="text-center tt">答题竞赛(上)</h2>
+				</div>
+																												<hr />
+				<div class="box itembox">
+					<blockquote class="questype">一、单选题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('3639');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_3639">
+							<input id="time_3639" type="hidden" name="time[3639]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>计算机信息系统防雷保安器分为通信接口防雷保安器和( )。					</div>
+															<div class="choice">
+	                	<p>A:  运行防雷保安器    </p><p>B:电源防雷保安器   </p><p>C: 建筑防雷保安器    </p><p>D:  地线接口防雷保安器</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td></td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第2题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('6826');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_6826">
+							<input id="time_6826" type="hidden" name="time[6826]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a><p>侦查是（）和人民检察院依法进行的专门调查和采取有关强制措施的活动。</p>					</div>
+															<div class="choice">
+	                	<p>A:人民法院</p>
+
+<p>B:司法局</p>
+
+<p>C:公安机关</p>
+
+<p>D:纪委</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>C</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td></td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																																																																																																				<hr />
+				<div class="box itembox">
+					<blockquote class="questype">二、填空题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('6830');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_6830">
+							<input id="time_6830" type="hidden" name="time[6830]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a><p>的说法是否水电费()</p>					</div>
+										<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td><p>sfs dfsd&nbsp;</p></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td><p>sdf&nbsp;</p></td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																																								<hr />
+				<div class="box itembox">
+					<blockquote class="questype">三、问答题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('6829');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_6829">
+							<input id="time_6829" type="hidden" name="time[6829]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a><p>测试问答</p>					</div>
+										<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td><p>似懂非懂</p></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td><p>地方</p></td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																							</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

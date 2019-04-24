@@ -11,7 +11,7 @@
 						<tr>
 							<td class="form-inline" colspan="2">
 								录入时间：
-								<input type="text" name="search[stime]" size="9"  class="form-control datetimepicker" data-date="2019-04-22" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="form-control datetimepicker" data-date="2019-04-22" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
+								<input type="text" name="search[stime]" size="9"  class="form-control datetimepicker" data-date="2019-04-24" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="form-control datetimepicker" data-date="2019-04-24" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
 							</td>
 							<td>
 								关键字：
@@ -27,7 +27,7 @@
 						  	</td>
 						  	<td>
 								<input type="hidden" name="search[questiontype]" value="1">
-								<input type="hidden" name="search[questionsubjectid]" value="">
+								<input type="hidden" name="search[questionsubjectid]" value="1">
 				        		录入人：<input name="search[username]" class="form-control" size="5" type="text" value=""/>
 				        	</td>
 				        	<td>
@@ -43,7 +43,8 @@
 							<td>
 						  		知识点：<select name="search[questionsectionid]" class="combox form-control" id="sectionselect" target="knowsselect" refUrl="?exam-master-questions-ajax-getknowsbysectionid&sectionid={value}">
 							  		<option value="">选择章节</option>
-							  								  		</select>
+							  									  									  		<option value="1">理论知识</option>
+							  									  								  		</select>
 						  	</td>
 						  	<td>
 						  		<select name="search[questionknowsid]" id="knowsselect" class="form-control">
@@ -67,10 +68,90 @@
 						</tr>
 					</thead>
 					<tbody>
-											</tbody>
+										        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="6826" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="侦查是（）和人民检察院依法进行的专门调查和采取有关强制措施的活动。">侦查是（）和人民检察院依法进行的专门调查和采取有关强制措施的...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3639" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="计算机信息系统防雷保安器分为通信接口防雷保安器和( )。">计算机信息系统防雷保安器分为通信接口防雷保安器和( )。</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3638" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="计算机信息系统防雷保安器分为电源防雷保安器和( )。">计算机信息系统防雷保安器分为电源防雷保安器和( )。</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3635" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="计算机信息电子设备雷害一般由( )产生的。">计算机信息电子设备雷害一般由( )产生的。</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3634" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="要防止计算机信息系统遭到雷害，不能指望( )，它不但不能保护计算机系统，反而增加了计算机系统的雷害。">要防止计算机信息系统遭到雷害，不能指望( )，它不但不能保护计算...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3631" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="雷电侵入计算机信息系统的途径主要有：电源馈线侵入、( )，地电位反击。">雷电侵入计算机信息系统的途径主要有：电源馈线侵入、( )，地电位...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3630" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="雷电侵入计算机信息系统的途径主要有：( )，信息传输通道线侵入，地电位反击。">雷电侵入计算机信息系统的途径主要有：( )，信息传输通道线侵入，...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3627" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="当干扰非常强、不易受抑制，但仅在一定时域内阵发存在时，通常采用的方法是使信号的传输在时间上避开干扰的作用，这种防电磁干扰的方法称( )。">当干扰非常强、不易受抑制，但仅在一定时域内阵发存在时，通常采...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3626" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="采用各种屏蔽材料和结构，合理地将辐射干扰电磁场与接收器隔离开，使干扰电磁场在到达接收器时强度降低到最低限度，从而达到控制干扰的目的。这种防电磁干扰的方法叫( )。">采用各种屏蔽材料和结构，合理地将辐射干扰电磁场与接收器隔离开...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3623" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="常用的具体防电磁信息泄漏的方法有：屏蔽法、抑制法、相关干扰法、( )。">常用的具体防电磁信息泄漏的方法有：屏蔽法、抑制法、相关干扰法...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        					</tbody>
 				</table>
 				<ul class="pagination">
-	            			        </ul>
+	            	<li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=1">|&lsaquo;</a></li><li><a href="#" class="current">1</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=2">2</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=3">3</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=4">4</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=5">5</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=6">6</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=7">7</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=8">8</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=9">9</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=10">10</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=11"> >> </a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questiontype]=1&questionids=&rowsquestionids=&0.9825298027060128&page=137">&rsaquo;|</a></li><li><a>共1370条数据</a></li>		        </ul>
 		    	<script type="text/javascript">
 		    		jQuery(function($) {
 						markSelectedQuestions('ids[]','iselectquestions_1');

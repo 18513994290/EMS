@@ -5,11 +5,6 @@
 		<div class="main box">
 			<div class="col-xs-3" id="questionbar">
 				<dl class="clear" style="width:270px;" data-spy="affix" data-offset-top="235" id="questionindex">
-					<!--<dd>
-						<h2><a class="btn btn-danger col-xs-12" style="font-size:1.2em;"><span id="timer_h">00</span>：<span id="timer_m">00</span>：<span id="timer_s">00</span></a></h2>
-					</dd>-->
-
-
 					<dt class="float_l"><h4>&nbsp;</h4></dt>
 					<ul class="nav nav-tabs" role="tablist">
 						<?php $oid = 0; ?>
@@ -25,12 +20,11 @@
 						<?php } ?>
 						<?php $oid++; ?>
 						<li role="presentation"<?php if($qid == 1){ ?> class="active"<?php } ?>><a href="#qt_<?php echo $quest; ?>" aria-controls="home" role="tab" data-toggle="tab"><?php echo $this->tpl_var['questype'][$quest]['questype']; ?></a></li>
-						<!--<li role="presentation"<?php if($qid == 1){ ?> class="active"<?php } ?>><a href="#qt_<?php echo $quest; ?>" aria-controls="home" role="tab" data-toggle="tab"><?php echo $this->tpl_var['ols'][$oid]; ?></a></li>-->
 						<?php } ?>
 						<?php } ?>
 						<?php } ?>
 					</ul>
-					<div class="tab-content" style="margin-top:5px;">
+					<div class="tab-content" style="margin-top:5px;" id="questionindex">
 						<?php $oid = 0; ?>
 						<?php $qmid = 0; ?>
 						<?php $qid = 0;
@@ -42,35 +36,39 @@
 						<?php $oid++; ?>
 						<div role="tabpanel" class="tab-pane tableindex<?php if($qid == 1){ ?> active<?php } ?>" id="qt_<?php echo $quest; ?>">
 							<?php $tid = 0; ?>
-							<?php $qnid = 0;
+			                <?php $qnid = 0;
  foreach($this->tpl_var['sessionvars']['examsessionquestion']['questions'][$quest] as $key => $question){ 
  $qnid++; ?>
-							<?php $tid++; ?>
-							<?php $qmid++; ?>
-
-							<a id="sign_<?php echo $question['questionid']; ?>" href="javascript:;" onclick="javascript:gotoquestion('<?php echo $question['questionid']; ?>')" class="btn btn-default<?php if($this->tpl_var['sessionvars']['examsessionsign'][$question['questionid']]){ ?> btn-danger<?php } ?>"><span><?php echo $question['questionknowsid'][0]['knows']; ?></span></a>
+			                <?php $tid++; ?>
+			                <?php $qmid++; ?>
+							<a id="sign_<?php echo $question['questionid']; ?>" href="javascript:;" onclick="javascript:gotoquestion('<?php echo $question['questionid']; ?>')" class="btn btn-default<?php if($this->tpl_var['sessionvars']['examsessionsign'][$question['questionid']]){ ?> btn-danger<?php } ?>"><?php echo $tid; ?></a>
 							<?php } ?>
 							<?php $qrid = 0;
  foreach($this->tpl_var['sessionvars']['examsessionquestion']['questionrows'][$quest] as $key => $questionrow){ 
  $qrid++; ?>
-							<?php $tid++; ?>
-							<?php $did = 0;
+			                <?php $tid++; ?>
+			                <?php $did = 0;
  foreach($questionrow['data'] as $key => $data){ 
  $did++; ?>
-							<?php $qmid++; ?>
-							<a id="sign_<?php echo $data['questionid']; ?>" href="javascript:;" onclick="javascript:gotoquestion('<?php echo $data['questionid']; ?>')" class="btn btn-default<?php if($this->tpl_var['sessionvars']['examsessionsign'][$data['questionid']]){ ?> btn-danger<?php } ?>"><?php echo $tid; ?>-<?php echo $did; ?></a>
-							<?php } ?>
-							<?php } ?>
+			                <?php $qmid++; ?>
+			                <a id="sign_<?php echo $data['questionid']; ?>" href="javascript:;" onclick="javascript:gotoquestion('<?php echo $data['questionid']; ?>')" class="btn btn-default<?php if($this->tpl_var['sessionvars']['examsessionsign'][$data['questionid']]){ ?> btn-danger<?php } ?>"><?php echo $tid; ?>-<?php echo $did; ?></a>
+                			<?php } ?>
+                			<?php } ?>
 						</div>
 						<?php } ?>
 						<?php } ?>
 						<?php } ?>
 					</div>
 				</dl>
+				<div class="float_l list-group" id="Topic-list">
+					<div>22222222222222222222222222222222</div>
+					<div>22222222222222222222222222222222</div>
+					<div>22222222222222222222222222222222</div>
+				</div>
 			</div>
 			<form id="form1" name="form1" method="post" action="index.php?exam-app-exam-score" class="col-xs-9 split pull-right" style="padding:0px;">
 				<div class="box itembox">
-					<h2 class="text-center"><?php echo $this->tpl_var['sessionvars']['examsession']; ?></h2>
+					<!--<h2 class="text-center"><?php echo $this->tpl_var['sessionvars']['examsession']; ?></h2>-->
 				</div>
 				<?php $oid = 0; ?>
 				<?php $qcid = 0; ?>
@@ -92,9 +90,9 @@
                 <?php $qcid++; ?>
 				<div class="box itembox paperexamcontent" id="questions_<?php echo $question['questionid']; ?>" rel="<?php echo $quest; ?>">
 					<h4 class="title">
-						第<?php echo $tid; ?>题
+						知识点:<?php echo $question['questionknowsid'][0]['knows']; ?>
 						<span class="pull-right">
-							<!--<a class="btn <?php if($this->tpl_var['sessionvars']['examsessionsign'][$question['questionid']]){ ?>btn-danger<?php } else { ?>btn-info<?php } ?> qicon" href="javascript:;" onclick="javascript:signQuestion('<?php echo $question['questionid']; ?>',this);"><i class="glyphicon glyphicon-bookmark"></i></a>-->
+							<a class="btn <?php if($this->tpl_var['sessionvars']['examsessionsign'][$question['questionid']]){ ?>btn-danger<?php } else { ?>btn-info<?php } ?> qicon" href="javascript:;" onclick="javascript:signQuestion('<?php echo $question['questionid']; ?>',this);"><i class="glyphicon glyphicon-bookmark"></i></a>
 							<a name="question_<?php echo $question['questionid']; ?>">
 							<input id="time_<?php echo $question['questionid']; ?>" type="hidden" name="time[<?php echo $question['questionid']; ?>]"/>
 						</span>
@@ -224,13 +222,12 @@
 				<?php } ?>
 				<h3 class="text-center">
 					<input type="hidden" name="insertscore" value="1"/>
-					<a class="btn btn-primary" style="font-size:1em;width:270px;" href="#submodal" role="button" data-toggle="modal">确认</a>
+					<a class="btn btn-primary" style="font-size:1em;width:270px;" href="#submodal" role="button" data-toggle="modal">交 卷</a>
 				</h3>
 			</form>
 		</div>
 	</div>
 </div>
-<!--
 <div class="modal fade" id="submodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -247,8 +244,7 @@
 			</div>
 		</div>
 	</div>
-</div>-->
-
+</div>
 <div id="dg" style="z-index: 9999; position: fixed ! important; right: 0px; top: 10%;background-color:rgba(255,255,255,0.15)" class="panel-heading" >
 	<table width=""100% style="position: absolute; width:260px; right: 0px; top: 0px;" class="table-hover">
 		<tr id="ranktable">
@@ -261,7 +257,6 @@
 	</table>
 
 </div>
-
 <script type="text/javascript">
 var qindex = 0;
 function gotoquestion(questid)
@@ -277,8 +272,6 @@ function gotoindexquestion(index)
 	$(".paperexamcontent").hide();
 	$(".paperexamcontent").eq(index).show();
 	$("#questype_"+$(".paperexamcontent").eq(index).attr('rel')).show();
-
-	// console.log($(".paperexamcontent input[type=redio] selected").val())
 }
 $(document).ready(function(){
 	$.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
@@ -428,28 +421,26 @@ $(document).ready(function(){
 	$('.yesdonumber').html($('#questionindex .btn-primary').length);
 });
 
-
-
 //排名榜
 setInterval(function(){
-	var rank =$("#rank");
+    var rank =$("#rank");
 
     var URL="index.php?exam-app-exam-rank";
     $.post(URL,'',function (result) {
-		console.log(result)
-	if(!result)	return false;
-    var td ='';
-	$.each(result,function (i,item) {
-		td+=rankdata(i+1,item[0],item[1]);
-	})
-     if(td){
-	     $("#ranktable").next().nextAll().remove();//清空数据榜
-         rank.after(td);
-	 }
+        console.log(result)
+        if(!result)	return false;
+        var td ='';
+        $.each(result,function (i,item) {
+            td+=rankdata(i+1,item[0],item[1]);
+        })
+        if(td){
+            $("#ranktable").next().nextAll().remove();//清空数据榜
+            rank.after(td);
+        }
 
     },"json");
 
-    },500);
+},500);
 
 function rankdata(i,name,score)
 {
@@ -460,6 +451,10 @@ function rankdata(i,name,score)
     td+='<td>'+score+'</td>';
     td+="</tr>";
     return td;
+}
+//添加一道题考试记录
+function addExamHistory($sessionid = false,$status = 1) {
+	
 }
 </script>
 </body>

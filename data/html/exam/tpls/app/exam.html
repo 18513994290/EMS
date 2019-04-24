@@ -65,8 +65,8 @@
 					<ol class="breadcrumb">
 					  <li><a href="index.php">首页</a></li>
 					  <li><a href="index.php?exam-app">考试</a></li>
-					 <!-- <li><a href="index.php?exam-app-basics">上半场</a></li>-->
-					  <li class="active">上半场</li>
+					 <!-- <li><a href="index.php?exam-app-basics">答题竞赛（上）</a></li>-->
+					  <li class="active">答题竞赛（上）</li>
 					</ol>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 				<h4 class="title">正式考试</h4>
 				<div class="alert alert-info">
 					<strong>提示：</strong>
-					<p>本考场开启时间 2019-04-22 10:00:00 - 2019-05-22 22:00:00 ； 考试次数 不限 ； 抽卷规则 用户手选试卷。</p>
+					<p>本考场开启时间 2019-04-24 00:00:00 - 2019-05-01 00:00:00 ； 考试次数 不限 ； 抽卷规则 用户手选试卷。</p>
 
 	            	<ul class="list-unstyled">
 	                	<li><b>1、</b>点击考试名称按钮进入答题界面，考试开始计时。</li>
@@ -84,25 +84,17 @@
 	                </ul>
                 </div>
                 <div class="col-xs-12" style="padding-left:0px;">
-                                	                			                	<div class="box itembox" style="padding-top:20px;">
-							<div class="col-xs-3">
-								<a href="index.php?exam-app-recover" class="thumbnail pull-left ajax">
-									<img src="app/core/styles/img/item.jpg" alt="" width="100%">
+                                	                		
+                		                										<div class="col-xs-3" style="width:20%">
+																	<a action-before="clearStorage" href="index.php?exam-app-exam-selectquestions&examid=10" class="thumbnail ajax" style="position:relative;">
+																	<img src="app/core/styles/img/item.jpg" alt="" width="100%">
 								</a>
+								<h5 class="text-center">
+									答题竞赛(上)								</h5>
 							</div>
-							<div class="col-xs-9">
-								<a href="index.php?exam-app-recover" class="ajax"><h4 class="title">意外续考</h4></a>
-								<p>系统检测到您曾经在2019-04-23 10:48:45开启了一场未完成的考试，试卷名称为《上半场》，点击继续考试可以进行续考。</p>
-								<hr/>
-								<p>
-									<span class="pull-right">
-										<a href="index.php?exam-app-recover" class="btn btn-primary ajax">继续考试</a>&nbsp;&nbsp;
-										<a href="index.php?exam-app-recover-clearexamsession" class="btn btn-danger confirm" msg="放弃考试会删除此次考试会话并不能恢复，确认要放弃吗？">放弃考试</a>
-									</span>
-								</p>
-							</div>
-						</div>
-	                	                	                                </div>
+																					<ul class="pagination pull-right"></ul>
+                		
+                		                	                                </div>
 			</div>
 		</div>
 	</div>

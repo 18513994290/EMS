@@ -23,6 +23,7 @@
 	<script src="app/core/styles/js/ckeditor/ckeditor.js"></script>
 	<script src="app/core/styles/js/plugin.js"></script>
 	<script src="app/exam/styles/js/plugin.js"></script>
+
 </head><body data-spy="scroll" data-target="#myScrollspy">
 <div class="container-fluid" id="questioncontent">
 	<div class="row-fluid">
@@ -64,7 +65,7 @@
                     	<p>A:立案</p><p>B:侦查</p><p>C:起诉</p><p>D:审判</p>                    </div>
                     					<div class="selector">
                     		                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6821]" rel="6821" value="A" />A </label>
-	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6821]" rel="6821" value="B" />B </label>
+	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6821]" rel="6821" value="B" checked/>B </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6821]" rel="6821" value="C" />C </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6821]" rel="6821" value="D" />D </label>
 	                        	                        	                        	                                        </div>
@@ -110,7 +111,7 @@
 															<div class="choice">
                     	<p>A:人民法院</p><p>B:人民检察院</p><p>C:司法局</p><p>D:纪委</p>                    </div>
                     					<div class="selector">
-                    		                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6825]" rel="6825" value="A" />A </label>
+                    		                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6825]" rel="6825" value="A" checked/>A </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6825]" rel="6825" value="B" />B </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6825]" rel="6825" value="C" />C </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6825]" rel="6825" value="D" />D </label>
@@ -141,7 +142,7 @@
 <p>D:纪委</p>                    </div>
                     					<div class="selector">
                     		                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6826]" rel="6826" value="A" />A </label>
-	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6826]" rel="6826" value="B" />B </label>
+	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6826]" rel="6826" value="B" checked/>B </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6826]" rel="6826" value="C" />C </label>
 	                        	                        	                        <label class="radio-inline"><input type="radio" name="question[6826]" rel="6826" value="D" />D </label>
 	                        	                        	                        	                                        </div>
@@ -193,7 +194,7 @@ function gotoindexquestion(index)
 $(document).ready(function(){
 	$.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
 		var setting = {
-									time:42426,
+									time:40709,
 									hbox:$("#timer_h"),
 			mbox:$("#timer_m"),
 			sbox:$("#timer_s"),

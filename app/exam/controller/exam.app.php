@@ -201,6 +201,7 @@ class action extends app
 
 	private function score()
 	{
+
 		$questype = $this->basic->getQuestypeList();
 		$sessionvars = $this->exam->getExamSessionBySessionid();
 		$needhand = 0;
@@ -421,18 +422,13 @@ class action extends app
 			}
 		}
 	}
-    public function rank()
-	{
-		$rank=[];
-		array_push($rank,['ZS',rand(8,20)]);
-		array_push($rank,['LS',rand(1,8)]);
-        echo json_encode($rank);
-	}
 
 
 
 	private function paper()
 	{
+
+
 		$sessionvars = $this->exam->getExamSessionBySessionid();
 		$lefttime = 0;
 		$questype = $this->basic->getQuestypeList();
@@ -464,9 +460,7 @@ class action extends app
 			if($this->data['currentbasic']['basicexam']['selftemplate'])
 			$this->tpl->display($this->data['currentbasic']['basicexam']['selftemplate']);
 			else
-
-			$this->tpl->display('exam_paper_ctf');
-//			$this->tpl->display('exam_paper');
+			$this->tpl->display('exam_paper');
 		}
 	}
 
@@ -698,6 +692,33 @@ class action extends app
 		$this->tpl->assign('number',$number);
 		$this->tpl->assign('exams',$exams);
 		$this->tpl->display('exam');
+	}
+    //排行榜
+    public function rank()
+    {
+        $rank=[];
+        array_push($rank,['ZS',rand(8,20)]);
+        array_push($rank,['LS',rand(1,8)]);
+        echo json_encode($rank);
+    }
+
+
+    //查询某个类型的试卷
+	public function TypeQuestions()
+	{
+        $type = $this->ev->post('type');
+        $exam = $this->ev->post('exam');
+//        getQuestionsList //根据知识点获取所有题
+//      $questions = $this->exam->getQuestionsList($page,10,$args);
+
+	}
+	//添加一道题的考试记录
+    public function addOneExamHistory()
+	{
+//      $sessionid = false,$status = 1
+//      $id = $this->favor->addExamHistory();
+//		echo "<pre>";
+
 	}
 }
 

@@ -76,8 +76,8 @@
 							<label class="control-label col-sm-3">
 						        <input type="checkbox" onclick="javascript:$('.sec_1:checkbox').prop('checked',$(this).is(':checked'));"> 理论知识						    </label>
 						    <div class="col-sm-9" style="text-indent:10px;">
-						    							    	<label class="checkbox-inline"><input type="checkbox" value="1" name="args[basicknows][1][1]" class="section sec_1" />網絡安全</label>
-						    							    	<label class="checkbox-inline"><input type="checkbox" value="2" name="args[basicknows][1][2]" class="section sec_1" />工控知識</label>
+						    							    	<label class="checkbox-inline"><input type="checkbox" value="1" name="args[basicknows][1][1]" class="section sec_1" />网络安全</label>
+						    							    	<label class="checkbox-inline"><input type="checkbox" value="2" name="args[basicknows][1][2]" class="section sec_1" />工控知识</label>
 						    							    	<label class="checkbox-inline"><input type="checkbox" value="7" name="args[basicknows][1][7]" class="section sec_1" />技工</label>
 						    							    </div>
 						</div>
@@ -140,7 +140,7 @@
 						<div class="form-group">
 							<label for="basicexam_self" class="control-label col-sm-3">绑定正式考试试卷：</label>
 							<div class="col-sm-9 form-inline">
-								<input size="50" class="form-control" type="text" id="basicexam_self" name="args[basicexam][self]" needle="needle" msg="您必须填写至少一个试卷" value="2,9" /> <a class="selfmodal btn btn-primary" href="javascript:;" data-target="#modal" url="index.php?exam-master-exams-selectexams&search[subjectid]=1&exams={basicexam_self}&useframe=1&target=basicexam_self" valuefrom="basicexam_self">选卷</a>
+								<input size="50" class="form-control" type="text" id="basicexam_self" name="args[basicexam][self]" needle="needle" msg="您必须填写至少一个试卷" value="2,9,10" /> <a class="selfmodal btn btn-primary" href="javascript:;" data-target="#modal" url="index.php?exam-master-exams-selectexams&search[subjectid]=1&exams={basicexam_self}&useframe=1&target=basicexam_self" valuefrom="basicexam_self">选卷</a>
 								<span class="help-block">请在试卷管理处查看试卷ID，将数字ID填写在这里，多个请用英文逗号（,）隔开。留空或填0时将无法进行该项考试。</span>
 							</div>
 						</div>
@@ -153,6 +153,7 @@
 					            						            	<option value="exam_paper_2">exam_paper_2</option>
 					            						            	<option value="exam_paper_3">exam_paper_3</option>
 					            						            	<option value="exam_paper_ctf">exam_paper_ctf</option>
+					            						            	<option value="exam_paper_html">exam_paper_html</option>
 					            						            </select>
 							</div>
 						</div>
